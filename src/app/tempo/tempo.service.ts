@@ -94,14 +94,21 @@ export class TempoService {
 
     return {
       airquality,
-      periodcelements: [{ name: "Carbono", weight: data.list[0].components["co"].toString(), position: 1, symbol: "co" }]
+      periodcelements: [
+        { name: "Carbono", weight: data.list[0].components["co"].toString(), position: 1, symbol: "CO" },
+        { name: "NO", weight: data.list[0].components["no"].toString(), position: 2, symbol: "NO" },
+        { name: "Dióxido de Nitrogênio", weight: data.list[0].components["no2"].toString(), position: 2, symbol: "NO2" },
+        { name: "Ozônio", weight: data.list[0].components["o3"].toString(), position: 2, symbol: "O3" },
+        { name: "Dióxido de Enxofre", weight: data.list[0].components["so2"].toString(), position: 2, symbol: "SO2" },
+        { name: "PM2_5", weight: data.list[0].components["pm2_5"].toString(), position: 2, symbol: "PM2_5" },
+        { name: "Particulas inalaveis", weight: data.list[0].components["pm10"].toString(), position: 2, symbol: "PM10" },
+        { name: "NH3", weight: data.list[0].components["nh3"].toString(), position: 2, symbol: "NH3" }
+      ]
     }
   }
   private convertKelvinToCelcius(kelvin: number): number {
     return kelvin - 272.15
   }
-
-
 }
 
 interface ICurrentWeatherData {

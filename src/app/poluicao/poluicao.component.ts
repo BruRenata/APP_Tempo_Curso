@@ -12,6 +12,7 @@ export class PoluicaoComponent {
 
   constructor(tempoService: TempoService) {
     tempoService.buscarPoluicao(-27.590465150887418, -50.36225636499196).subscribe(data => this.polutionData = data);
+    console.log(this.polutionData);
   }
 
 }

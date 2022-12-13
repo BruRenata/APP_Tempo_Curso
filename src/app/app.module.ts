@@ -28,6 +28,9 @@ import { AppRoutingModule } from './app-routing.module'
     ReactiveFormsModule,
     AppRoutingModule
   ],
+  exports:[
+    BuscaCidadeComponent
+  ],
   providers: [TempoService],
   bootstrap: [AppComponent]
 })
