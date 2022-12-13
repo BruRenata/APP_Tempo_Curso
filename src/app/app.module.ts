@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { BuscaCidadeComponent } from './busca-cidade/busca-cidade.component';
-import { PoluicaoComponent } from './poluicao/poluicao.component'
+import { PoluicaoComponent } from './poluicao/poluicao.component';
+import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PoluicaoComponent } from './poluicao/poluicao.component'
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [TempoService],
   bootstrap: [AppComponent]

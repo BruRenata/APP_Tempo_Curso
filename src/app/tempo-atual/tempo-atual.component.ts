@@ -10,13 +10,13 @@ import { TempoService } from '../tempo/tempo.service';
 export class TempoAtualComponent {
 
   //@Input() tempoAtual!: ITempoAtual;
-  tempoAtual!: ITempoAtual;
+  tempo!: ITempoAtual;
 
   /*constructor() {//tempoService: TempoService) {
     //tempoService.buscarTempoAtual("Florianopolis", "Brasil").subscribe(data => this.tempoAtual = data);
   }*/
 
   constructor(tempoService: TempoService) {
-    tempoService.tempoAtual.subscribe(data => this.tempoAtual = data);
+    tempoService.tempoAtual.subscribe(data => this.tempo = data);
   }
 }
