@@ -1,3 +1,15 @@
+<mat-form-field class="example-full-width">
+  <mat-label>Cidade</mat-label>
+  <input id="CidadePais" matInput placeholder="Ex. Blumenau" [(ngModel)]="cidadePais">
+  <button (click)="buscaPoluicao();" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+    <mat-icon matSuffix>search</mat-icon>
+  </button>
+</mat-form-field>
+
+<!--<app-busca-cidade></app-busca-cidade>-->
+
+
+
 <div *ngIf="polutionData">
     <h1>
         Air Quality: {{polutionData.airquality}}
